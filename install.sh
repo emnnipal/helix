@@ -1,5 +1,8 @@
 # !/bin/bash
 
+# install helix
+brew install helix
+
 # install typescript language server and prettier as formatter
 pnpm install -g typescript typescript-language-server prettier
 
