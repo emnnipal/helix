@@ -26,8 +26,12 @@ name = "tsx"
 formatter = { command = 'prettier', args = ["--stdin-filepath", "file.tsx"] }
 auto-format = true
 
-# Deno's formatter is written in Rust and is very fast compared to Prettier
-# but has different config file so we still use prettier.
+# Deno's formatter is written in Rust and is very fast compared to Prettier,
+# but it uses a different configuration file. Therefore, we still use Prettier.
+# However, if you prefer, we can use Deno's formatter CLI options to enable
+# similar configurations in Prettier. 
+# For the CLI options, see https://deno.land/manual@v1.32.1/tools/formatter
+
 # To use, install deno with brew
 # [[language]]
 # name = "javascript"
