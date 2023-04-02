@@ -19,3 +19,6 @@ k = { j = "normal_mode" }
 
 [editor.cursor-shape]
 insert = "bar"
+
+[editor.statusline]
+left = ["mode","version-control", "spinner","file-name"]
