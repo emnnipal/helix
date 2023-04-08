@@ -8,7 +8,8 @@ bufferline = "multiple"
 # "diagnostic.error" = { underline = { style = "curl", color = "red" } }
 
 [keys.normal]
-esc = ["collapse_selection", "keep_primary_selection"] 
+esc = ["collapse_selection", "keep_primary_selection"]
+space = { c = ":buffer-close" }
 # J = "10j"
 # K = "10k"
  
