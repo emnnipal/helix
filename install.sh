@@ -7,5 +7,7 @@ brew install \
   deno \
 
 # install typescript language server and prettier as formatter
-pnpm install -g typescript typescript-language-server prettier
+pnpm install -g \
+  typescript \
+  typescript-language-server \
 
