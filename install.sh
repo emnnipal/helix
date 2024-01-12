@@ -10,4 +10,6 @@ brew install \
 pnpm install -g \
 	typescript \
 	typescript-language-server \
-	prettier
+	prettier \
+	@tailwindcss/language-server \
+
