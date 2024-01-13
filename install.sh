@@ -4,6 +4,7 @@
 # install deno as formatter
 brew install \
 	helix \
+	lf \
 
 # install typescript language server and prettier as formatter
 pnpm install -g \
