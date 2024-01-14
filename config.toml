@@ -17,6 +17,9 @@ V = ["extend_line_below", "select_mode"]
 D = ["select_mode", "goto_line_end", "delete_selection"]
 "C-a" = ["goto_file_start","extend_line_below", "select_mode", "goto_last_line"]
 g = { h = "hover"}
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
+y = "yank_main_selection_to_clipboard"
 
 [keys.insert]
 j = { k = "normal_mode" }
@@ -26,6 +29,8 @@ k = { j = "normal_mode" }
 [keys.select]
 H = "goto_line_start"
 L = "goto_line_end"
+y ="yank_main_selection_to_clipboard"
+P = "replace_selections_with_clipboard"
 
 [editor.cursor-shape]
 insert = "bar"
