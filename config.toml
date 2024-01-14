@@ -12,6 +12,8 @@ J = ["move_line_down", "move_line_down","move_line_down","move_line_down","move_
 K = ["move_line_up", "move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up"]
 H = "goto_line_start"
 L = "goto_line_end"
+V = ["extend_line_below", "select_mode"]
+"C-r" = "redo"
  
 [keys.insert]
 j = { k = "normal_mode" }
@@ -27,3 +29,4 @@ insert = "bar"
 
 [editor.statusline]
 left = ["mode","version-control","spinner","file-name"]
+
