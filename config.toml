@@ -12,8 +12,10 @@ J = ["move_line_down", "move_line_down","move_line_down","move_line_down","move_
 K = ["move_line_up", "move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up"]
 H = "goto_line_start"
 L = "goto_line_end"
+V = ["extend_line_below", "select_mode"]
 "C-r" = "redo"
 D = ["select_mode", "goto_line_end", "delete_selection"]
+"C-a" = ["goto_file_start","extend_line_below", "select_mode", "goto_last_line"]
 
 [keys.insert]
 j = { k = "normal_mode" }
