@@ -16,6 +16,7 @@ V = ["extend_line_below", "select_mode"]
 "C-r" = "redo"
 D = ["select_mode", "goto_line_end", "delete_selection"]
 "C-a" = ["goto_file_start","extend_line_below", "select_mode", "goto_last_line"]
+g = { h = "hover"}
 
 [keys.insert]
 j = { k = "normal_mode" }
