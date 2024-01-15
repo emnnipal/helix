@@ -32,7 +32,7 @@
 [[language]]
 name = "html"
 formatter = { command = 'prettier', args = ["--parser", "html"] }
-language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
+language-servers = [ "vscode-html-language-server", "tailwindcss-ls", "emmet-lsp" ]
 
 [[language]]
 name = "json"
@@ -57,49 +57,22 @@ auto-format = true
 name = "jsx"
 formatter = { command = 'prettier', args = ["--stdin-filepath", "file.jsx"] }
 auto-format = true
-language-servers = [ "typescript-language-server", "tailwindcss-ls", "eslint" ]
+language-servers = [ "typescript-language-server", "tailwindcss-ls", "emmet-lsp" ]
 
 [[language]]
 name = "tsx"
 scope="source.tsx"
 formatter = { command = 'prettier', args = ["--stdin-filepath", "file.tsx"] }
 auto-format = true
-language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
-# language-servers = [ "typescript-language-server", "tailwindcss-ls", "eslint" ]
+language-servers = [ "typescript-language-server", "tailwindcss-ls", "emmet-lsp" ]
+# language-servers = [ "typescript-language-server", "tailwindcss-ls", "emmet-lsp", "eslint" ]
 
 [[language]]
 name = "svelte"
 language-servers = [ "svelteserver", "tailwindcss-ls" ]
 
-# Deno's formatter is written in Rust and is very fast compared to Prettier,
-# but it uses a different configuration file. Therefore, we still use Prettier.
+[language-server.emmet-lsp]
+command = "emmet-language-server"
+args = ["--stdio"]
 
-# To use, install deno with brew
-# [[language]]
-# name = "javascript"
-# formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js" ] }
-# auto-format = true
 
-# [[language]]
-# name = "json"
-# formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json" ] }
-
-# [[language]]
-# name = "markdown"
-# formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md" ] }
-# auto-format = true
-
-# [[language]]
-# name = "typescript"
-# formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts" ] }
-# auto-format = true
-
-# [[language]]
-# name = "jsx"
-# formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx" ] }
-# auto-format = true
-
-# [[language]]
-# name = "tsx"
-# formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx" ] }
-# auto-format = true

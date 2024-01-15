@@ -12,4 +12,4 @@ pnpm install -g \
 	typescript-language-server \
 	prettier \
 	@tailwindcss/language-server \
-
+	@olrtg/emmet-language-server \
