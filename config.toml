@@ -29,7 +29,7 @@ k = "goto_next_buffer"
 [keys.normal.space.q]
 q = ":quit"
 c = ":buffer-close"
-C = ":buffer-close-all"
+C = ":buffer-close-others"
 
 [keys.normal.space.g]
 g = ":sh kitty @ launch --type tab --allow-remote-control --title lazygit --cwd current --copy-env lazygit"
