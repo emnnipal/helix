@@ -6,7 +6,7 @@ mouse = false
 bufferline = "always"
 
 [keys.normal]
-esc = ["collapse_selection", "keep_primary_selection"]
+esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 J = ["move_line_down", "move_line_down","move_line_down","move_line_down","move_line_down","move_line_down","move_line_down","move_line_down","move_line_down","move_line_down"]
 K = ["move_line_up", "move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up"]
 H = "goto_line_start"
@@ -32,7 +32,7 @@ c = ":buffer-close"
 C = ":buffer-close-others"
 
 [keys.normal.space.g]
-g = ":sh kitty @ launch --type tab --allow-remote-control --title lazygit --cwd current --copy-env lazygit"
+g = [":sh kitty @ launch --type tab --allow-remote-control --title lazygit --cwd current --copy-env lazygit" ]
 
 [keys.insert]
 j = { k = "normal_mode" }
