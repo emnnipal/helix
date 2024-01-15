@@ -21,12 +21,15 @@ g = { h = "hover"}
 # y = "yank_main_selection_to_clipboard"
  
 [keys.normal.space]
-c = ":buffer-close"
 w = ":update"
-q = ":quit"
 J = "jumplist_picker"
 j = "goto_previous_buffer"
 k = "goto_next_buffer"
+
+[keys.normal.space.q]
+q = ":quit"
+c = ":buffer-close"
+C = ":buffer-close-all"
 
 [keys.normal.space.g]
 g = ":sh kitty @ launch --type tab --allow-remote-control --title lazygit --cwd current --copy-env lazygit"
