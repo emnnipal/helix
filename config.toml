@@ -54,3 +54,7 @@ insert = "bar"
 [editor.statusline]
 left = ["mode","version-control","spinner","file-name"]
 
+[editor.indent-guides]
+render = true
+character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
+
