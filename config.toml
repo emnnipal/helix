@@ -16,10 +16,10 @@ V = ["extend_line_below", "select_mode"]
 D = ["select_mode", "goto_line_end", "delete_selection"]
 "C-a" = ["goto_file_start","extend_line_below", "select_mode", "goto_last_line"]
 g = { h = "hover"}
-"C-\\" = ":sh kitty @ launch --type tab --allow-remote-control --title lazygit --cwd current"
 # p = "paste_clipboard_after"
 # P = "paste_clipboard_before"
 # y = "yank_main_selection_to_clipboard"
+"C-\\" = ":sh kitty @ launch --type tab --allow-remote-control --title lazygit --cwd current --copy-env lazygit"
  
 [keys.normal.space]
 c = ":buffer-close"
@@ -28,7 +28,7 @@ q = ":quit"
 J = "jumplist_picker"
 j = "goto_previous_buffer"
 k = "goto_next_buffer"
-"\\" = ":sh kitty @ launch --allow-remote-control --title lazygit --cwd current"
+"\\" = ":sh kitty @ launch --type tab --allow-remote-control --title lazygit --cwd current --copy-env lazygit"
 
 [keys.insert]
 j = { k = "normal_mode" }
