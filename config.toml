@@ -16,10 +16,11 @@ V = ["extend_line_below", "select_mode"]
 D = ["select_mode", "goto_line_end", "delete_selection"]
 "C-a" = ["goto_file_start","extend_line_below", "select_mode", "goto_last_line", "extend_line_below"]
 g = { h = "hover"}
+x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
 # p = "paste_clipboard_after"
 # P = "paste_clipboard_before"
 # y = "yank_main_selection_to_clipboard"
- 
+
 [keys.normal.space]
 w = ":update"
 J = "jumplist_picker"
