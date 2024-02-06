@@ -14,7 +14,7 @@ L = "goto_line_end"
 V = ["extend_line_below", "select_mode"]
 "C-r" = "redo"
 D = ["select_mode", "goto_line_end", "delete_selection"]
-"C-a" = ["goto_file_start","extend_line_below", "select_mode", "goto_last_line", "extend_line_below"]
+"C-a" = "select_all"
 g = { h = "hover"}
 x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
 # p = "paste_clipboard_after"
