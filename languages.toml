@@ -1,34 +1,27 @@
-# [language-server.eslint]
-# args = ["--stdio"] # should come by def with helix
-# command = "vscode-eslint-language-server"
+# Eslint
+ [language-server.eslint]
+ args = ["--stdio"]
+ command = "vscode-eslint-language-server"
 
-# [language-server.eslint.config]
-# validate = "on" # I assume this enabled eslit to validate the file, which now shows me counts for errors, warnings, etc in helix
-# experimental = { useFlatConfig = false } # not sure why this is here
-# rulesCustomizations = []
-# run = "onType"
-# problems = { shortenToSingleLine = false }
-# nodePath = "" # seems redundant, why do we need to override this, should get detected autom.
+ [language-server.eslint.config]
+ # format = true
+ format = { enable = true }
+ nodePath = ""
+ onIgnoredFiles = "off"
+ packageManager = "pnpm"
+ quiet = false
+ rulesCustomizations = []
+ run = "onType"
+ useESLintClass = false
+ validate = "on"
+ codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
+ # codeActionOnSave = { mode = "all" }
+ codeActionsOnSave = { mode = "all", "source.fixAll.eslint" = true }
+ experimental = { }
+ problems = { shortenToSingleLine = false }
+ workingDirectory = { mode = "auto" }
+ # workingDirectory = { mode = "location" }
 
-# [language-server.eslint.config.codeAction]
-# [language-server.eslint.config.codeAction.disableRuleComment]
-# enable = true
-# location = "separateLine"
-
-# [language-server.eslint.config.codeAction.showDocumentation]
-# enable = true # why?
-
-# [language-server.eslint.config.codeActionOnSave]
-# enable = true
-# mode = "fixAll"
-
-# [language-server.eslint.config.workingDirectory]
-# mode = "location" # do we need to override this?
-
-# [language-server.typescript-language-server.config]
-# documentFormatting = false # use eslint instead, do we have to override this ourselves? I think if eslint LSP is detected and enabled, this should be done automatically for us as generally everyone lets eslint take over linting+prettying, which uses prettier by default if detected by it
-
-# To use, install prettier globally with pnpm
 [[language]]
 name = "html"
 formatter = { command = 'prettier', args = ["--parser", "html"] }
@@ -47,29 +40,30 @@ language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
 name = "javascript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
+language-servers = [ "typescript-language-server", "eslint" ]
 
 [[language]]
 name = "typescript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
+language-servers = [ "typescript-language-server", "eslint" ]
 
 [[language]]
 name = "jsx"
 formatter = { command = 'prettier', args = ["--stdin-filepath", "file.jsx"] }
 auto-format = true
-language-servers = [ "typescript-language-server", "tailwindcss-ls", "emmet-lsp" ]
+language-servers = [ "typescript-language-server", "tailwindcss-ls", "emmet-lsp", "eslint" ]
 
 [[language]]
 name = "tsx"
 scope="source.tsx"
 formatter = { command = 'prettier', args = ["--stdin-filepath", "file.tsx"] }
 auto-format = true
-language-servers = [ "typescript-language-server", "tailwindcss-ls", "emmet-lsp" ]
-# language-servers = [ "typescript-language-server", "tailwindcss-ls", "emmet-lsp", "eslint" ]
+language-servers = [ "typescript-language-server", "tailwindcss-ls", "emmet-lsp", "eslint" ]
 
 [[language]]
 name = "svelte"
-language-servers = [ "svelteserver", "tailwindcss-ls" ]
+language-servers = [ "svelteserver", "tailwindcss-ls", "eslint" ]
 
 [language-server.emmet-lsp]
 command = "emmet-language-server"

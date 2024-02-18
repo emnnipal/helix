@@ -13,3 +13,4 @@ pnpm install -g \
 	prettier \
 	@tailwindcss/language-server \
 	@olrtg/emmet-language-server \
+  vscode-langservers-extracted \
