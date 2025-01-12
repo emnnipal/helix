@@ -4,18 +4,55 @@ theme = "my_tokyonight_storm"
 line-number = "relative"
 mouse = false
 bufferline = "always"
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "error"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.statusline]
+left = ["mode", "version-control", "spinner", "file-name"]
+
+[editor.indent-guides]
+render = true
+character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
+
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
-J = ["move_line_down", "move_line_down","move_line_down","move_line_down","move_line_down","move_line_down","move_line_down","move_line_down","move_line_down","move_line_down"]
-K = ["move_line_up", "move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up"]
+J = [
+  "move_line_down",
+  "move_line_down",
+  "move_line_down",
+  "move_line_down",
+  "move_line_down",
+  "move_line_down",
+  "move_line_down",
+  "move_line_down",
+  "move_line_down",
+  "move_line_down",
+]
+K = [
+  "move_line_up",
+  "move_line_up",
+  "move_line_up",
+  "move_line_up",
+  "move_line_up",
+  "move_line_up",
+  "move_line_up",
+  "move_line_up",
+  "move_line_up",
+  "move_line_up",
+]
 H = "goto_first_nonwhitespace"
 L = "goto_line_end"
 V = ["extend_line_below", "select_mode"]
 "C-r" = "redo"
 D = ["select_mode", "goto_line_end", "delete_selection"]
 "C-a" = "select_all"
-g = { h = "hover"}
+g = { h = "hover" }
 # x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
 # p = "paste_clipboard_after"
 # P = "paste_clipboard_before"
@@ -35,29 +72,42 @@ C = ":buffer-close-others"
 
 [keys.normal.space.g]
 # you need to set allow_remote_control to yes in order to use kitty @ launch
-g = [":sh kitty @ launch --type tab --allow-remote-control --title lazygit --cwd current --copy-env lazygit" ]
+g = [
+  ":sh kitty @ launch --type tab --allow-remote-control --title lazygit --cwd current --copy-env lazygit",
+]
 
 [keys.insert]
 j = { k = "normal_mode" }
-k = { j = "normal_mode" } 
+k = { j = "normal_mode" }
 "C-space" = "completion"
 
 [keys.select]
 H = "goto_line_start"
 L = "goto_line_end"
-J = ["extend_line_down", "extend_line_down", "extend_line_down", "extend_line_down", "extend_line_down", "extend_line_down", "extend_line_down", "extend_line_down", "extend_line_down", "extend_line_down"]
-K = ["extend_line_up", "extend_line_up", "extend_line_up", "extend_line_up", "extend_line_up", "extend_line_up", "extend_line_up", "extend_line_up", "extend_line_up", "extend_line_up"]
+J = [
+  "extend_line_down",
+  "extend_line_down",
+  "extend_line_down",
+  "extend_line_down",
+  "extend_line_down",
+  "extend_line_down",
+  "extend_line_down",
+  "extend_line_down",
+  "extend_line_down",
+  "extend_line_down",
+]
+K = [
+  "extend_line_up",
+  "extend_line_up",
+  "extend_line_up",
+  "extend_line_up",
+  "extend_line_up",
+  "extend_line_up",
+  "extend_line_up",
+  "extend_line_up",
+  "extend_line_up",
+  "extend_line_up",
+]
 # y ="yank_main_selection_to_clipboard"
 # P = "replace_selections_with_clipboard"
 # p = "replace_selections_with_clipboard"
-
-[editor.cursor-shape]
-insert = "bar"
-
-[editor.statusline]
-left = ["mode","version-control","spinner","file-name"]
-
-[editor.indent-guides]
-render = true
-character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
-
