@@ -1,31 +1,42 @@
 # Eslint
- [language-server.eslint]
- args = ["--stdio"]
- command = "vscode-eslint-language-server"
+# [language-server.eslint]
+# args = ["--stdio"]
+# command = "vscode-eslint-language-server"
+#
+# [language-server.eslint.config]
+# # format = true
+# format = { enable = true }
+# nodePath = ""
+# onIgnoredFiles = "off"
+# packageManager = "pnpm"
+# quiet = false
+# rulesCustomizations = []
+# run = "onType"
+# useESLintClass = false
+# validate = "on"
+# codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
+# # codeActionOnSave = { mode = "all" }
+# codeActionsOnSave = { mode = "all", "source.fixAll.eslint" = true }
+# experimental = { }
+# problems = { shortenToSingleLine = false }
+# workingDirectory = { mode = "auto" }
+# # workingDirectory = { mode = "location" }
 
- [language-server.eslint.config]
- # format = true
- format = { enable = true }
- nodePath = ""
- onIgnoredFiles = "off"
- packageManager = "pnpm"
- quiet = false
- rulesCustomizations = []
- run = "onType"
- useESLintClass = false
- validate = "on"
- codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
- # codeActionOnSave = { mode = "all" }
- codeActionsOnSave = { mode = "all", "source.fixAll.eslint" = true }
- experimental = { }
- problems = { shortenToSingleLine = false }
- workingDirectory = { mode = "auto" }
- # workingDirectory = { mode = "location" }
+[language-server.emmet-lsp]
+command = "emmet-language-server"
+args = ["--stdio"]
+
+[language-server.vscode-eslint-language-server.config.workingDirectory]
+mode = "auto"
 
 [[language]]
 name = "html"
 formatter = { command = 'prettier', args = ["--parser", "html"] }
-language-servers = [ "vscode-html-language-server", "tailwindcss-ls", "emmet-lsp" ]
+language-servers = [
+  "vscode-html-language-server",
+  "tailwindcss-ls",
+  "emmet-lsp",
+]
 
 [[language]]
 name = "json"
@@ -34,39 +45,49 @@ formatter = { command = 'prettier', args = ["--parser", "json"] }
 [[language]]
 name = "css"
 formatter = { command = 'prettier', args = ["--parser", "css"] }
-language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
+language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
 
 [[language]]
 name = "javascript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
-language-servers = [ "typescript-language-server", "eslint" ]
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
 
 [[language]]
 name = "typescript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
-language-servers = [ "typescript-language-server", "eslint" ]
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
 
 [[language]]
 name = "jsx"
 formatter = { command = 'prettier', args = ["--stdin-filepath", "file.jsx"] }
 auto-format = true
-language-servers = [ "typescript-language-server", "tailwindcss-ls", "emmet-lsp", "eslint" ]
+language-servers = [
+  "typescript-language-server",
+  "tailwindcss-ls",
+  "emmet-lsp",
+  "vscode-eslint-language-server",
+]
 
 [[language]]
 name = "tsx"
-scope="source.tsx"
+scope = "source.tsx"
 formatter = { command = 'prettier', args = ["--stdin-filepath", "file.tsx"] }
 auto-format = true
-language-servers = [ "typescript-language-server", "tailwindcss-ls", "emmet-lsp", "eslint" ]
+language-servers = [
+  "typescript-language-server",
+  "tailwindcss-ls",
+  "emmet-lsp",
+  "vscode-eslint-language-server",
+]
 
 [[language]]
 name = "svelte"
-language-servers = [ "svelteserver", "tailwindcss-ls", "eslint" ]
-
-[language-server.emmet-lsp]
-command = "emmet-language-server"
-args = ["--stdio"]
-
-
+language-servers = ["svelteserver", "tailwindcss-ls", "eslint"]
