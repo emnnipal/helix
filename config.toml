@@ -6,8 +6,8 @@ mouse = false
 bufferline = "always"
 end-of-line-diagnostics = "hint"
 
-[editor.inline-diagnostics]
-cursor-line = "error"
+# [editor.inline-diagnostics]
+# cursor-line = "error"
 
 [editor.cursor-shape]
 insert = "bar"
