@@ -1,4 +1,4 @@
-inherits = "my_tokyonight"
+inherits = "tokyonight_storm"
 
 # Override Theme
 "ui.bufferline" = { bg = "bg-menu", fg = "gray" }
@@ -7,12 +7,3 @@ inherits = "my_tokyonight"
 "ui.linenr" = { fg = "comment", modifiers = ["dim"] }
 "ui.linenr.selected" = { fg = "white", modifiers = [""] }
 "ui.virtual.jump-label" = "orange"
-
-[palette]
-border = "#1d202f"
-bg = "#24283b"
-bg-inlay = "#233745"
-bg-highlight = "#373d5a"
-bg-menu = "#1f2335"
-bg-visual = "#2e3c64"
-border-highlight = "#29a4bd"
