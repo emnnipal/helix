@@ -6,6 +6,7 @@ inherits = "my_tokyonight"
 "ui.statusline.separator" = "|"
 "ui.linenr" = { fg = "comment", modifiers = ["dim"] }
 "ui.linenr.selected" = { fg = "white", modifiers = [""] }
+"ui.virtual.jump-label" = "orange"
 
 [palette]
 border = "#1d202f"
@@ -15,4 +16,3 @@ bg-highlight = "#373d5a"
 bg-menu = "#1f2335"
 bg-visual = "#2e3c64"
 border-highlight = "#29a4bd"
-
