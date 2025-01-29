@@ -5,5 +5,4 @@ inherits = "tokyonight_storm"
 "ui.bufferline.active" = { fg = "white", bg = "bg" }
 "ui.statusline.separator" = "|"
 "ui.linenr" = { fg = "comment", modifiers = ["dim"] }
-"ui.linenr.selected" = { fg = "white", modifiers = [""] }
-"ui.virtual.jump-label" = "orange"
+"ui.linenr.selected" = { fg = "orange", modifiers = [""] }
