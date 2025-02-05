@@ -1,20 +1,21 @@
 # !/bin/bash
 
 # Install Helix and related packages
-brew install \
-  helix \
-  tree-sitter \
-  lf
+# brew install \
+#   helix \
+#   tree-sitter \
+#   lf
 
 # Install LSP-related packages
 pnpm install -g \
   typescript \
   typescript-language-server \
-  prettier \
-  eslint \
+  @biomejs/biome \
   @tailwindcss/language-server \
   @olrtg/emmet-language-server \
-  vscode-langservers-extracted@4.8.0
+  vscode-langservers-extracted@4.8.0 \
+  # prettier \
+  # eslint \
 
 # TODO: Remove the version constraint for vscode-langservers-extracted (4.8.0) once the Helix ESLint issue in 4.10.0 is resolved.
 # References:

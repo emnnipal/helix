@@ -1,6 +1,6 @@
 # !/bin/bash
 
-# install helix
+# Uninstall helix
 # brew remove \
 # 	helix \
 # 	lf \
@@ -9,8 +9,9 @@
 pnpm remove -g \
   typescript \
   typescript-language-server \
-  prettier \
-  eslint \
+  @biomejs/biome \
   @tailwindcss/language-server \
   @olrtg/emmet-language-server \
   vscode-langservers-extracted
+# prettier \
+# eslint
