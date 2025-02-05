@@ -7,6 +7,7 @@ bufferline = "always"
 end-of-line-diagnostics = "hint"
 completion-timeout = 5
 completion-trigger-len = 1
+default-yank-register = "+"      # use system clipboard for yank and paste actions
 
 # [editor.inline-diagnostics]
 # cursor-line = "error"
@@ -59,9 +60,6 @@ D = ["select_mode", "goto_line_end", "delete_selection"]
 "C-a" = "select_all"
 g = { h = "hover" }
 # x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
-# p = "paste_clipboard_after"
-# P = "paste_clipboard_before"
-# y = "yank_to_clipboard"
 
 [keys.normal.space]
 w = ":update"
