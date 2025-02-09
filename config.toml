@@ -19,7 +19,15 @@ display-messages = true
 insert = "bar"
 
 [editor.statusline]
-left = ["mode", "version-control", "spinner", "file-name"]
+left = [
+  "mode",
+  "version-control",
+  "spinner",
+  "file-name",
+  "file-modification-indicator",
+  "read-only-indicator",
+  "file-type",
+]
 
 [editor.indent-guides]
 render = true
