@@ -9,8 +9,8 @@ completion-timeout = 5
 completion-trigger-len = 1
 default-yank-register = "+"      # use system clipboard for yank and paste actions
 
-[editor.inline-diagnostics]
-cursor-line = "error"
+# [editor.inline-diagnostics]
+# cursor-line = "error"
 
 [editor.lsp]
 display-messages = true
