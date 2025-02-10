@@ -119,6 +119,3 @@ K = [
   "extend_line_up",
   "extend_line_up",
 ]
-# y ="yank_main_selection_to_clipboard"
-# P = "replace_selections_with_clipboard"
-# p = "replace_selections_with_clipboard"
