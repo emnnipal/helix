@@ -46,7 +46,7 @@ formatter = { command = 'biome', args = [
 auto-format = true
 language-servers = [
   "typescript-language-server",
-  "vscode-eslint-language-server",
+  # "vscode-eslint-language-server",
   "biome",
 ]
 
@@ -61,7 +61,7 @@ formatter = { command = 'biome', args = [
 auto-format = true
 language-servers = [
   "typescript-language-server",
-  "vscode-eslint-language-server",
+  # "vscode-eslint-language-server",
   "biome",
 
 ]
@@ -79,7 +79,7 @@ language-servers = [
   "typescript-language-server",
   "tailwindcss-ls",
   "emmet-lsp",
-  "vscode-eslint-language-server",
+  # "vscode-eslint-language-server",
   "biome",
 ]
 
@@ -96,7 +96,7 @@ language-servers = [
   "typescript-language-server",
   "tailwindcss-ls",
   "emmet-lsp",
-  "vscode-eslint-language-server",
+  # "vscode-eslint-language-server",
   "biome",
 ]
 
