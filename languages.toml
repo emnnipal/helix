@@ -102,4 +102,8 @@ language-servers = [
 
 [[language]]
 name = "svelte"
-language-servers = ["svelteserver", "tailwindcss-ls", "eslint"]
+language-servers = [
+  "svelteserver",
+  "tailwindcss-ls",
+  # "vscode-eslint-language-server"
+]
