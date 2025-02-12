@@ -129,3 +129,7 @@ K = [
 # NOTE: move/rename current buffer
 # Ref: https://github.com/helix-editor/helix/issues/6825#issuecomment-2499152942
 # :move <C-r>%
+
+# NOTE:
+# Ref: https://github.com/helix-editor/helix/discussions/12174#discussioncomment-11437600
+# You can also use <C-w> to remove the last segment when using <C-r>% command expansion
