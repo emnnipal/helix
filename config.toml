@@ -76,6 +76,10 @@ j = "goto_previous_buffer"
 k = "goto_next_buffer"
 o = "file_picker_in_current_buffer_directory"
 
+# TODO: keymap creating new file relative to current buffer dir path
+# Ref: https://github.com/helix-editor/helix/discussions/6052
+# :o <C-r>%
+
 [keys.normal.space.q]
 q = ":quit"
 c = ":buffer-close"
