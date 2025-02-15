@@ -83,7 +83,7 @@ q = ":quit"
 c = ":buffer-close"
 C = ":buffer-close-others"
 
-[keys.normal.space.g]
+# [keys.normal.space.g]
 # you need to set allow_remote_control to yes in order to use kitty @ launch
 # g = [
 #   ":sh kitty @ launch --type tab --allow-remote-control --title lazygit --cwd current --copy-env lazygit",
