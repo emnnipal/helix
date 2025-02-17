@@ -6,3 +6,5 @@ inherits = "tokyonight_storm"
 "ui.statusline.separator" = "|"
 "ui.linenr" = { fg = "comment", modifiers = ["dim"] }
 "ui.linenr.selected" = { fg = "orange", modifiers = [""] }
+# constructor = { fg = "red" }
+attribute = { fg = "green" }
