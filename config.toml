@@ -76,7 +76,6 @@ J = "jumplist_picker"
 j = "goto_previous_buffer"
 k = "goto_next_buffer"
 o = "file_picker_in_current_buffer_directory"
-z = "suspend"
 
 
 [keys.normal.space.q]
