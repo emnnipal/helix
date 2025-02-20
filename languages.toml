@@ -107,3 +107,41 @@ language-servers = [
   "tailwindcss-ls",
   # "vscode-eslint-language-server"
 ]
+
+
+# TODO: setup schemastore
+# Source: https://github.com/helix-editor/helix/discussions/7066#discussioncomment-7025130
+# [[language]]
+# name = "yaml"
+# file-types = ["yaml", "yml"]
+# language-servers = ["yaml-language-server"]
+# auto-format = true
+# formatter = { command = "prettier", args = ["--parser", "yaml"] }
+#
+# [language-server.yaml-language-server.config.yaml]
+# completion = true
+# validation = true
+# hover = true
+#
+# ## If I uncomment this I get errors
+# # [language-server.yaml-language-server.config.yaml.schemaStore]
+# # enable = true
+#
+# [language-server.yaml-language-server.config.yaml.schemas]
+# kubernetes = [
+#   "*deployment*.yaml",
+#   "*service*.yaml",
+#   "*configmap*.yaml",
+#   "*secret*.yaml",
+#   "*pod*.yaml",
+#   "*namespace*.yaml",
+#   "*ingress*.yaml",
+# ]
+# "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/kustomization.json" = [
+#   "*kustomization.yaml",
+#   "*kustomize.yaml",
+# ]
+# "https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json" = [
+#   "*workflow*.yaml",
+#   "*template*.yaml",
+# ]
