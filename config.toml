@@ -68,6 +68,7 @@ V = ["extend_line_below", "select_mode"]
 D = ["select_mode", "goto_line_end", "delete_selection"]
 "C-a" = "select_all"
 g = { h = "hover" }
+P = "replace_with_yanked"
 # x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
 
 [keys.normal.space]
