@@ -139,3 +139,8 @@ K = [
 # NOTE:
 # Ref: https://github.com/helix-editor/helix/discussions/12174#discussioncomment-11437600
 # You can also use <C-w> to remove the last segment when using <C-r>% command expansion
+
+
+# NOTE:
+# Ref: https://www.reddit.com/r/HelixEditor/comments/14v300b/how_to_select_within_tags/
+# To select within html tags, move cursor above inside of html tags then use <Alt-o>
