@@ -19,15 +19,6 @@ language-servers = [
 ]
 
 [[language]]
-name = "json"
-formatter = { command = 'biome', args = [
-  "format",
-  "--write",
-  "--stdin-file-path",
-  "file.json",
-] }
-
-[[language]]
 name = "css"
 formatter = { command = 'biome', args = [
   "format",
@@ -128,7 +119,41 @@ formatter = { command = "prettier", args = ["--parser", "yaml"] }
 name = "bash"
 auto-format = true
 
-# TODO: setup schemastore
+[[language]]
+name = "json"
+formatter = { command = 'biome', args = [
+  "format",
+  "--write",
+  "--stdin-file-path",
+  "file.json",
+] }
+auto-format = true
+language-servers = [
+  { name = "vscode-json-language-server", except-features = [
+    "format",
+  ] },
+]
+
+# NOTE: Schemas and the formatter do not work if I override them, so I redefine
+# the entire language server for JSON instead.schemas and formatter not working
+# if I define it by just overriding
+[language-server.vscode-json-language-server]
+command = "vscode-json-language-server"
+args = ["--stdio"]
+config = { provideFormatter = true, json = { validate = { enable = true }, schemas = [
+  # Source: https://github.com/helix-editor/helix/discussions/8823#discussioncomment-8093075
+  { fileMatch = [
+    "tsconfig.json",
+    "tsconfig.*.json",
+  ], url = "https://json.schemastore.org/tsconfig.json" },
+
+  { fileMatch = [
+    "package.json",
+  ], url = "https://json.schemastore.org/package.json" },
+] } }
+
+
+# TODO: setup schemastore. UPDATE: this might not be needed since schemas for github workflow works out of the box
 # Source: https://github.com/helix-editor/helix/discussions/7066#discussioncomment-7025130
 # [[language]]
 # name = "yaml"
