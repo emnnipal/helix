@@ -14,8 +14,9 @@ pnpm install -g \
   @biomejs/biome \
   @tailwindcss/language-server \
   @olrtg/emmet-language-server \
-  vscode-langservers-extracted@4.8.0
-# prettier \
+  vscode-langservers-extracted@4.8.0 \
+  yaml-language-server@next \
+  prettier \
 # eslint \
 
 # TODO: Remove the version constraint for vscode-langservers-extracted (4.8.0) once the Helix ESLint issue in 4.10.0 is resolved.
