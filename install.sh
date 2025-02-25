@@ -17,7 +17,13 @@ pnpm install -g \
   vscode-langservers-extracted@4.8.0 \
   yaml-language-server@next \
   prettier \
+  bash-language-server
 # eslint \
+
+# Install LSP packages only available in brew
+# brew install \
+#   taplo \
+#   shfmt # formatter for shell/bash files
 
 # TODO: Remove the version constraint for vscode-langservers-extracted (4.8.0) once the Helix ESLint issue in 4.10.0 is resolved.
 # References:

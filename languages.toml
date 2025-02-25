@@ -33,7 +33,7 @@ formatter = { command = 'biome', args = [
   "format",
   "--write",
   "--stdin-file-path",
-  "file.css"
+  "file.css",
 ] }
 language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
 
@@ -115,10 +115,19 @@ language-servers = [
 ]
 
 [[language]]
+name = "toml"
+auto-format = true
+formatter = { command = "taplo", args = ["fmt", "-"] }
+
+[[language]]
 name = "yaml"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "yaml"] }
- 
+
+[[language]]
+name = "bash"
+auto-format = true
+
 # TODO: setup schemastore
 # Source: https://github.com/helix-editor/helix/discussions/7066#discussioncomment-7025130
 # [[language]]
