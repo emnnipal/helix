@@ -20,6 +20,7 @@ language-servers = [
 
 [[language]]
 name = "css"
+# formatter = { command = 'prettier', args = ["--parser", "css"] }
 formatter = { command = 'biome', args = [
   "format",
   "--write",
@@ -121,6 +122,7 @@ auto-format = true
 
 [[language]]
 name = "json"
+# formatter = { command = 'prettier', args = ["--parser", "json"] }
 formatter = { command = 'biome', args = [
   "format",
   "--write",
