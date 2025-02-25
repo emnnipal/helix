@@ -82,6 +82,11 @@ k = "goto_next_buffer"
 o = "file_picker_in_current_buffer_directory"
 z = "suspend"
 
+[keys.normal.m]
+# Workaround for us to be able to replace highlighted/selected text with P keymap.
+i = ["select_mode", "select_textobject_inner"]
+a = ["select_mode", "select_textobject_around"]
+
 [keys.normal.space.q]
 q = ":quit"
 c = ":buffer-close"
@@ -92,8 +97,9 @@ j = { k = "normal_mode" }
 k = { j = "normal_mode" }
 "C-space" = "completion"
 
+
 [keys.select]
-# P = "replace_with_yanked"
+P = "replace_with_yanked"
 V = ["extend_line_below", "select_mode"]
 H = "goto_line_start"
 L = "goto_line_end"
