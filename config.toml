@@ -87,21 +87,13 @@ q = ":quit"
 c = ":buffer-close"
 C = ":buffer-close-others"
 
-# [keys.normal.space.g]
-# d = "changed_file_picker"
-# NOTE: this is problematic. A lot of issues occur when using this. You no longer can't use <c-o> in lazygit even used outside of helix.
-# g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw", ":reload-all"]
-# you need to set allow_remote_control to yes in order to use kitty @ launch
-# g = [
-#   ":sh kitty @ launch --type tab --allow-remote-control --title lazygit --cwd current --copy-env lazygit",
-# ]
-
 [keys.insert]
 j = { k = "normal_mode" }
 k = { j = "normal_mode" }
 "C-space" = "completion"
 
 [keys.select]
+# P = "replace_with_yanked"
 V = ["extend_line_below", "select_mode"]
 H = "goto_line_start"
 L = "goto_line_end"
@@ -129,6 +121,16 @@ K = [
   "extend_line_up",
   "extend_line_up",
 ]
+
+# [keys.normal.space.g]
+# d = "changed_file_picker"
+# NOTE: this is problematic. A lot of issues occur when using this. You no longer can't use <c-o> in lazygit even used outside of helix.
+# g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw", ":reload-all"]
+# you need to set allow_remote_control to yes in order to use kitty @ launch
+# g = [
+#   ":sh kitty @ launch --type tab --allow-remote-control --title lazygit --cwd current --copy-env lazygit",
+# ]
+
 
 # NOTE: create new file relative to current buffer path
 # Ref: https://github.com/helix-editor/helix/discussions/6052
