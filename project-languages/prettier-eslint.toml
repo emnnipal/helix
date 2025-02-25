@@ -1,0 +1,40 @@
+[[language]]
+name = "css"
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+
+[[language]]
+name = "javascript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+
+[[language]]
+name = "typescript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+language-servers = [
+  "typescript-language-server",
+  # "vscode-eslint-language-server",
+]
+
+[[language]]
+name = "jsx"
+formatter = { command = 'prettier', args = ["--stdin-filepath", "file.jsx"] }
+language-servers = [
+  "typescript-language-server",
+  "tailwindcss-ls",
+  "emmet-lsp",
+  # "vscode-eslint-language-server",
+]
+
+[[language]]
+name = "tsx"
+formatter = { command = 'prettier', args = ["--stdin-filepath", "file.tsx"] }
+language-servers = [
+  "typescript-language-server",
+  "tailwindcss-ls",
+  "emmet-lsp",
+  # "vscode-eslint-language-server",
+]
+
+
+[[language]]
+name = "json"
+formatter = { command = 'prettier', args = ["--parser", "json"] }
