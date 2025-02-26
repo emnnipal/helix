@@ -14,10 +14,11 @@ pnpm install -g \
   @biomejs/biome \
   @tailwindcss/language-server \
   @olrtg/emmet-language-server \
-  vscode-langservers-extracted@4.8.0 \
+  vscode-langservers-extracted \
   yaml-language-server@next \
   prettier \
   bash-language-server
+# vscode-langservers-extracted@4.8.0 \
 # eslint \
 
 # Install LSP packages only available in brew
