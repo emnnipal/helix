@@ -5,13 +5,20 @@
 # 	helix \
 # 	lf \
 
-# install LSP related packages
+# Uninstall LSP related packages
 pnpm remove -g \
   typescript \
   typescript-language-server \
   @biomejs/biome \
   @tailwindcss/language-server \
   @olrtg/emmet-language-server \
-  vscode-langservers-extracted
-# prettier \
-# eslint
+  vscode-langservers-extracted \
+  yaml-language-server@next \
+  prettier \
+  bash-language-server
+# eslint \
+
+# uninstall LSP packages instaleld using brew
+# brew uninstall \
+#   taplo \
+#   shfmt # formatter for shell/bash files
