@@ -8,4 +8,5 @@ inherits = "tokyonight_storm"
 "ui.linenr.selected" = { fg = "orange", modifiers = [""] }
 # constructor = { fg = "red" }
 attribute = { fg = "green" }
-punctuation = { fg = "fg-dark"}
+punctuation = { fg = "fg-dark" }
+"ui.text.directory" = { fg = "comment" }
