@@ -13,7 +13,7 @@ pnpm remove -g \
   @tailwindcss/language-server \
   @olrtg/emmet-language-server \
   vscode-langservers-extracted \
-  yaml-language-server@next \
+  yaml-language-server \
   prettier \
   bash-language-server
 # eslint \
