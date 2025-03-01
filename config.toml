@@ -76,14 +76,17 @@ g = { h = "hover" }
 # x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
 
 [keys.normal.space]
-e = "file_explorer_in_current_buffer_directory"
-E = "file_explorer"
+e = ":sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- bash ~/.config/helix/yazi-picker.sh open $(realpath %{buffer_name})"
+E = "file_explorer_in_current_buffer_directory"
+# e = "file_explorer_in_current_buffer_directory"
+# E = "file_explorer"
 w = ":update"
 J = "jumplist_picker"
 j = "goto_previous_buffer"
 k = "goto_next_buffer"
 o = "file_picker_in_current_buffer_directory"
 z = "suspend"
+
 
 [keys.normal.space.g]
 g = "changed_file_picker"
