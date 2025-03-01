@@ -89,7 +89,8 @@ z = "suspend"
 
 
 [keys.normal.space.g]
-g = "changed_file_picker"
+g = ":sh zellij run -c -f -x 0 -y 0 --width 100%% --height 100%% -- lazygit"
+c = "changed_file_picker"
 # Show blame info for current line
 l = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"
 # l = ":echo %sh{git blame --date=short -L %{cursor_line},+1 %{buffer_name} | sed -E 's/[0-9]+).*//' | sed 's/(//g'}"
