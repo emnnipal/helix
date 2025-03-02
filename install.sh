@@ -5,7 +5,8 @@
 #   helix \
 #   tree-sitter \
 #   sad \
-#   lf
+#   tmux \
+#   yazi
 
 # Install LSP-related packages
 pnpm install -g \
