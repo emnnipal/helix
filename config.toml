@@ -70,7 +70,8 @@ V = ["extend_line_below", "select_mode"]
 x = ["extend_line_below", "select_mode"]
 "C-r" = "redo"
 D = ["select_mode", "goto_line_end", "delete_selection"]
-"C-a" = "select_all"
+"C-a" = ["select_mode", "select_all"]
+"%" = ["select_mode", "select_all"]
 g = { h = "hover" }
 "C-space" = "expand_selection"
 # x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
