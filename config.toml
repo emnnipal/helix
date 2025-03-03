@@ -78,7 +78,7 @@ g = { h = "hover" }
 # x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
 
 [keys.normal.space]
-e = ":sh tmux new-window -n fx '~/.config/helix/picker.sh open \"%{buffer_name}\"'"
+e = ":sh tmux new-window -n fx '~/.config/helix/s/picker.sh \"%{buffer_name}\"'"
 E = "file_explorer_in_current_buffer_directory"
 # e = "file_explorer_in_current_buffer_directory"
 # E = "file_explorer"
