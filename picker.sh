@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-buffer_name="$(realpath "$2" 2>/dev/null)"
+buffer_name="$(readlink -f "$2" 2>/dev/null)"
 paths=$(yazi $buffer_name --chooser-file=/dev/stdout)
 
 if [[ -n "$paths" ]]; then
