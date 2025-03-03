@@ -11,7 +11,7 @@
 # Install LSP-related packages
 pnpm install -g \
   typescript \
-  @vtsls/language-server \
+  typescript-language-server \
   @biomejs/biome \
   @tailwindcss/language-server \
   @olrtg/emmet-language-server \
@@ -19,7 +19,7 @@ pnpm install -g \
   yaml-language-server@next \
   prettier \
   bash-language-server
-# typescript-language-server \
+# @vtsls/language-server \
 # vscode-langservers-extracted@4.8.0 \
 # eslint \
 

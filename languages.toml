@@ -1,10 +1,10 @@
 [language-server]
 biome = { command = "biome", args = ["lsp-proxy"] }
 
-[language-server.typescript-language-server]
-command = "vtsls"
-args = ["--stdio"]
-config.hostInfo = "helix"
+# [language-server.typescript-language-server]
+# command = "vtsls"
+# args = ["--stdio"]
+# config.hostInfo = "helix"
 
 [language-server.emmet-lsp]
 command = "emmet-language-server"
