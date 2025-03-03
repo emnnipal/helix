@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 buffer_name="$(readlink -f "$1" 2>/dev/null)"
-paths=$(yazi $buffer_name --chooser-file=/dev/stdout)
+paths=$(yazi "$buffer_name" --chooser-file=/dev/stdout | tr '\n' ' ')
+
+echo "paths: $paths" >>~/debug_text.log
 
 if [[ -n "$paths" ]]; then
   tmux last-window
