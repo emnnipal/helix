@@ -120,6 +120,7 @@ k = { j = "normal_mode" }
 
 
 [keys.select]
+G = "goto_last_line"
 P = "replace_with_yanked"
 V = ["extend_line_below", "select_mode"]
 H = "goto_line_start"
