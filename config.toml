@@ -76,6 +76,7 @@ D = ["select_mode", "goto_line_end", "delete_selection"]
 g = { h = "hover" }
 "C-space" = "expand_selection"
 # x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
+"ret" = "goto_word"
 
 [keys.normal.space]
 e = ":sh tmux new-window -n fx ~/.config/helix/s/picker.sh '%{buffer_name}'"
