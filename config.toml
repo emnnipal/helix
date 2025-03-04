@@ -71,12 +71,19 @@ V = ["extend_line_below", "select_mode", "trim_selections"]
 x = ["extend_line_below", "select_mode"]
 "C-r" = "redo"
 D = ["select_mode", "goto_line_end", "delete_selection"]
-# "C-a" = ["select_mode", "select_all"]
 "%" = ["select_mode", "select_all"]
 g = { h = "hover" }
 "C-space" = "expand_selection"
 # x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
 "ret" = "goto_word"
+
+# Remove selection in horizontal line navigations due to issue with append and insert keymap. Going at the start/end of selection instead of relative to the cursor.
+w = ["move_next_word_start", "collapse_selection"]
+W = ["move_next_long_word_start", "collapse_selection"]
+e = ["move_next_word_end", "collapse_selection"]
+E = ["move_next_long_word_end", "collapse_selection"]
+b = ["move_prev_word_start", "collapse_selection"]
+B = ["move_prev_long_word_start", "collapse_selection"]
 
 [keys.normal.space]
 e = ":sh tmux new-window -n fx ~/.config/helix/s/picker.sh '%{buffer_name}'"
