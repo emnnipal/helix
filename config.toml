@@ -187,7 +187,7 @@ K = [
 ]
 G = "goto_last_line"
 P = "replace_with_yanked"
-V = ["extend_line_below", "select_mode"]
+V = ["extend_line_below", "select_mode", "trim_selections"]
 H = "goto_line_start"
 L = "goto_line_end"
 "C-n" = "search_selection"
