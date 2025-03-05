@@ -158,6 +158,7 @@ P = "replace_with_yanked"
 V = ["extend_line_below", "select_mode"]
 H = "goto_line_start"
 L = "goto_line_end"
+"C-n" = "search_selection"
 J = [
   "extend_line_down",
   "extend_line_down",
