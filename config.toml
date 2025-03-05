@@ -76,7 +76,7 @@ x = ["extend_line_below", "select_mode"]
 D = ["select_mode", "goto_line_end", "delete_selection"]
 "%" = ["select_mode", "select_all"]
 g = { h = "hover" }
-"C-space" = "expand_selection"
+"C-space" = ["select_mode", "expand_selection"]
 # x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
 "ret" = "goto_word"
 a = ["collapse_selection", "append_mode"]
@@ -190,6 +190,7 @@ L = "goto_line_end"
 "C-n" = "search_selection"
 a = ["collapse_selection", "append_mode"]
 i = ["collapse_selection", "insert_mode"]
+"C-space" = "expand_selection"
 
 # [keys.normal.space.g]
 # d = "changed_file_picker"
