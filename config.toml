@@ -93,13 +93,16 @@ e = [":sh tmux new-window -n fx ~/.config/helix/s/picker.sh '%{buffer_name}'"]
 E = "file_explorer_in_current_buffer_directory"
 # e = "file_explorer_in_current_buffer_directory"
 # E = "file_explorer"
-f = { f = "@<space>fp<C-t>", p = "file_picker", F = "file_picker_in_current_directory" }
+f = "@<space>+f<C-t>"
 w = ":update"
 J = "jumplist_picker"
 j = "goto_previous_buffer"
 k = "goto_next_buffer"
 o = "file_picker_in_current_buffer_directory"
 z = "suspend"
+
+# for macros
+"+" = { f = "file_picker" }
 
 
 [keys.normal.space.g]
