@@ -104,8 +104,8 @@ z = "suspend"
 [keys.normal.space.g]
 g = ":sh tmux new-window -n lg 'lazygit'"
 f = [
-  ":noop %sh{git -c color.ui=always log --follow -p '%{buffer_name}' | delta > /tmp/hx-git.log}",
-  ":sh tmux new-window -n git-file-history 'less -R /tmp/hx-git.log; rm -r /tmp/hx-git.log'",
+  ":noop %sh{git -c color.ui=always log --follow -p '%{buffer_name}' | delta > /tmp/hx-git-file.log}",
+  ":sh tmux new-window -n git-file-history 'less -R /tmp/hx-git-file.log; rm -r /tmp/hx-git-file.log'",
 ]
 c = "changed_file_picker"
 # Show blame info for current line
