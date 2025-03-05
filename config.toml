@@ -76,6 +76,8 @@ g = { h = "hover" }
 "C-space" = "expand_selection"
 # x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
 "ret" = "goto_word"
+a = ["collapse_selection", "append_mode"]
+i = ["collapse_selection", "insert_mode"]
 
 # Remove selection in horizontal line navigations due to issue with append and insert keymap. Going at the start/end of selection instead of relative to the cursor.
 w = ["move_next_word_start", "collapse_selection"]
@@ -153,12 +155,6 @@ k = { j = "normal_mode" }
 
 
 [keys.select]
-G = "goto_last_line"
-P = "replace_with_yanked"
-V = ["extend_line_below", "select_mode"]
-H = "goto_line_start"
-L = "goto_line_end"
-"C-n" = "search_selection"
 J = [
   "extend_line_down",
   "extend_line_down",
@@ -183,6 +179,14 @@ K = [
   "extend_line_up",
   "extend_line_up",
 ]
+G = "goto_last_line"
+P = "replace_with_yanked"
+V = ["extend_line_below", "select_mode"]
+H = "goto_line_start"
+L = "goto_line_end"
+"C-n" = "search_selection"
+a = ["collapse_selection", "append_mode"]
+i = ["collapse_selection", "insert_mode"]
 
 # [keys.normal.space.g]
 # d = "changed_file_picker"
