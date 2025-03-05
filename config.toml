@@ -135,10 +135,6 @@ i = ["select_mode", "select_textobject_inner"]
 a = ["select_mode", "select_textobject_around"]
 # i = { b = "@mi(", B = "@mi{" }
 # a = { b = "@ma(", B = "@ma{" }
-c = { h = "@md md*md/md}" }
-
-[keys.select.m]
-c = { h = "@_ms ms*ms/ms}" }
 
 [keys.normal.m.v]
 i = { b = "@mi(", B = "@mi{" }

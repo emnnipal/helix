@@ -84,6 +84,7 @@ language-servers = [
   # "vscode-eslint-language-server",
   "biome",
 ]
+block-comment-tokens = { start = "{/*", end = "*/}" }
 
 [[language]]
 name = "tsx"
@@ -102,6 +103,7 @@ language-servers = [
   # "vscode-eslint-language-server",
   "biome",
 ]
+block-comment-tokens = { start = "{/*", end = "*/}" }
 
 [[language]]
 name = "svelte"
