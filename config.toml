@@ -153,8 +153,8 @@ c = ":buffer-close"
 C = ":buffer-close-others"
 
 [keys.insert]
-j = { k = "normal_mode" }
-k = { j = "normal_mode" }
+j = { k = "normal_mode", j = "normal_mode" }
+k = { j = "normal_mode", k = "normal_mode" }
 "C-space" = "completion"
 "C-v" = "paste_before"
 
