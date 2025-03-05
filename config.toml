@@ -77,6 +77,9 @@ g = { h = "hover" }
 # x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
 "ret" = "goto_word"
 
+# Workaround for us to be able to replace highlighted/selected text with P keymap by pressing select_mode first.
+# m = "@vm"
+
 # Remove selection in horizontal line navigations due to issue with append and insert keymap. Going at the start/end of selection instead of relative to the cursor.
 w = ["move_next_word_start", "collapse_selection"]
 W = ["move_next_long_word_start", "collapse_selection"]
@@ -104,6 +107,12 @@ g = ":sh tmux new-window -n lg 'lazygit'"
 c = "changed_file_picker"
 # Show blame info for current line
 b = ":echo %sh{git blame -L %{cursor_line},+1 '%{buffer_name}'}"
+# l = [
+#   ':noop %sh{git blame --date=short "%{buffer_name}" > /tmp/blamecontents}',
+#   ':noop %sh{echo "%{cursor_line}" > /tmp/blameline}',
+#   ':o /tmp/blamecontents',
+#   ':goto %sh{cat /tmp/blameline}',
+# ]
 # l = ":echo %sh{git blame --date=short -L %{cursor_line},+1 %{buffer_name} | sed -E 's/[0-9]+).*//' | sed 's/(//g'}"
 # l = ":sh git blame -L %{cursor_line},%{cursor_line} %{buffer_name}"
 # Copy git provider url for this file and line
@@ -114,6 +123,13 @@ b = ":echo %sh{git blame -L %{cursor_line},+1 '%{buffer_name}'}"
 # Workaround for us to be able to replace highlighted/selected text with P keymap.
 i = ["select_mode", "select_textobject_inner"]
 a = ["select_mode", "select_textobject_around"]
+# i = { b = "@mi(", B = "@mi{" }
+# a = { b = "@ma(", B = "@ma{" }
+
+[keys.normal.m.v]
+i = { b = "@mi(", B = "@mi{" }
+a = { b = "@ma(", B = "@ma{" }
+
 
 [keys.normal.space.q]
 q = ":quit"
