@@ -5,6 +5,14 @@ biome = { command = "biome", args = ["lsp-proxy"] }
 # It avoids suggesting nearby variables, which can sometimes be irrelevant while waiting for
 # completion results. In contrast, typescript-language-server seems slower in providing completions
 # and often suggests irrelevant results before the LSP finishes fetching them.
+#
+# However, vtsls has a drawback—it doesn’t fully handle file renames in monorepos.
+# When a file is moved to a different repository, it only updates tsconfig but doesn’t
+# fix import paths, whereas typescript-language-server handles this correctly.
+# This limitation applies regardless of whether we use Neovim.
+#
+# That said, renaming files within the same repository works as expected,
+# just like in typescript-language-server.
 [language-server.typescript-language-server]
 command = "vtsls"
 args = ["--stdio"]
