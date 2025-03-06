@@ -81,7 +81,14 @@ g = { h = "hover" }
 "A-o" = ["select_mode", "expand_selection"]
 # x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
 "ret" = "goto_word"
-a = ["collapse_selection", "append_mode"]
+
+# make "a" the same insert, no selection when in append mode
+a = [
+  "ensure_selections_forward",
+  "collapse_selection",
+  "move_char_right",
+  "insert_mode",
+]
 i = ["collapse_selection", "insert_mode"]
 # P = "@O<C-v><esc>"
 
@@ -194,7 +201,14 @@ V = ["extend_line_below", "select_mode"]
 H = "goto_line_start"
 L = "goto_line_end"
 "C-n" = "search_selection"
-a = ["collapse_selection", "append_mode"]
+
+# make "a" the same insert, no selection when in append mode
+a = [
+  "ensure_selections_forward",
+  "collapse_selection",
+  "move_char_right",
+  "insert_mode",
+]
 i = ["collapse_selection", "insert_mode"]
 # y = ["trim_selections", "yank"]
 
