@@ -8,15 +8,15 @@
 # Uninstall LSP related packages
 pnpm remove -g \
   typescript \
-  @vtsls/language-server \
   @biomejs/biome \
   @tailwindcss/language-server \
   @olrtg/emmet-language-server \
   vscode-langservers-extracted \
   yaml-language-server \
   prettier \
-  bash-language-server
-# typescript-language-server \
+  bash-language-server \
+  typescript-language-server
+# @vtsls/language-server
 # eslint \
 
 # uninstall LSP packages instaleld using brew
