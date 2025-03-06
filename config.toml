@@ -193,6 +193,8 @@ L = "goto_line_end"
 "C-n" = "search_selection"
 a = ["collapse_selection", "append_mode"]
 i = ["collapse_selection", "insert_mode"]
+y = ["trim_selections", "yank"]
+
 # "C-space" = "expand_selection"
 
 
