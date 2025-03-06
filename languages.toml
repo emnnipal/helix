@@ -3,20 +3,27 @@ biome = { command = "biome", args = ["lsp-proxy"] }
 
 # NOTE: Based on experience, vtsls feels faster and more responsive for TypeScript completion.
 # It avoids suggesting nearby variables, which can sometimes be irrelevant while waiting for
-# completion results. In contrast, typescript-language-server seems slower in providing completions
-# and often suggests irrelevant results before the LSP finishes fetching them.
+# completion results. In contrast, typescript-language-server is slower and often suggests
+# irrelevant results before the LSP finishes fetching them.
 #
 # However, vtsls has a drawback—it doesn’t fully handle file renames in monorepos.
 # When a file is moved to a different repository, it only updates tsconfig but doesn’t
 # fix import paths, whereas typescript-language-server handles this correctly.
 # This limitation applies regardless of whether we use Neovim.
 #
-# That said, renaming files within the same repository works as expected,
-# just like in typescript-language-server.
-[language-server.typescript-language-server]
-command = "vtsls"
-args = ["--stdio"]
-config.hostInfo = "helix"
+# NOTE: This is a deal breaker for using helix. File renaming with vtsls doesn’t work the
+# same way as with typescript-language-server. When renaming a file, vtsls may not properly
+# update import paths, unlike typescript-language-server, which handles this correctly.
+#
+# This could be due to how Helix IDE sends the "workspace/workspaceEdit" request,
+# which vtsls might interpret differently.
+#
+# That said, this is a dealbreaker—while vtsls is significantly faster than
+# typescript-language-server, this issue severely impacts the experience.
+# [language-server.typescript-language-server]
+# command = "vtsls"
+# args = ["--stdio"]
+# config.hostInfo = "helix"
 
 [language-server.emmet-lsp]
 command = "emmet-language-server"
