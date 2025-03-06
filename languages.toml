@@ -1,10 +1,14 @@
 [language-server]
 biome = { command = "biome", args = ["lsp-proxy"] }
 
-# [language-server.typescript-language-server]
-# command = "vtsls"
-# args = ["--stdio"]
-# config.hostInfo = "helix"
+# NOTE: Based on experience, vtsls feels faster and more responsive for TypeScript completion.
+# It avoids suggesting nearby variables, which can sometimes be irrelevant while waiting for
+# completion results. In contrast, typescript-language-server seems slower in providing completions
+# and often suggests irrelevant results before the LSP finishes fetching them.
+[language-server.typescript-language-server]
+command = "vtsls"
+args = ["--stdio"]
+config.hostInfo = "helix"
 
 [language-server.emmet-lsp]
 command = "emmet-language-server"
