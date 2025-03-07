@@ -14,3 +14,7 @@ inherits = "tokyonight_storm"
 attribute = { fg = "green" }
 punctuation = { fg = "fg-dark" }
 "ui.text.directory" = { fg = "comment" }
+
+# Setting the bg to an empty string fixes highlighting in the picker preview
+# (especially in grep), where the matched whole line is not highlighted—only the background.
+"ui.text" = { fg = "fg", bg = "" }
