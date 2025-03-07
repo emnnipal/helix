@@ -14,10 +14,6 @@ config.hostInfo = "helix"
 updateImportsOnFileMove = { enabled = "always" }
 suggest = { completeFunctionCalls = true }
 
-[language-server.typescript-language-server.config.javascript]
-updateImportsOnFileMove = { enabled = "always" }
-suggest = { completeFunctionCalls = true }
-
 [language-server.emmet-lsp]
 command = "emmet-language-server"
 args = ["--stdio"]
