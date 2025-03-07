@@ -18,9 +18,8 @@ pnpm install -g \
   yaml-language-server@next \
   prettier \
   bash-language-server \
-  typescript-language-server
-
-# @vtsls/language-server \
+  @vtsls/language-server
+# typescript-language-server \
 # vscode-langservers-extracted@4.8.0  \
 # eslint \
 

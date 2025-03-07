@@ -15,8 +15,8 @@ pnpm remove -g \
   yaml-language-server \
   prettier \
   bash-language-server \
-  typescript-language-server
-# @vtsls/language-server
+  @vtsls/language-server
+# typescript-language-server \
 # eslint \
 
 # uninstall LSP packages instaleld using brew
