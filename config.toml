@@ -114,6 +114,21 @@ k = "goto_next_buffer"
 o = "file_picker_in_current_buffer_directory"
 z = "suspend"
 
+# utilities 
+u = { t = [ # Trim whitespaces at the end of each line in current buffer
+  "save_selection",
+  "select_all",
+  # Delete trailing whitespace from end of each line
+  ":pipe sed 's/[ \t]*$//'",
+  # Delete trailing blank lines (including whitespace) from end of the buffer
+  ":pipe awk '/^\\s*$/ {b=b $0 \"\\n\"; next;} {printf \"%s\",b; b=\"\"; print;}'",
+  "collapse_selection",
+  "goto_last_line",
+  "add_newline_below",
+  "commit_undo_checkpoint",
+  ":write",
+] }
+
 # for macros
 "+" = { f = "file_picker" }
 
