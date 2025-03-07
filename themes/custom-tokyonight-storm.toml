@@ -15,6 +15,8 @@ attribute = { fg = "green" }
 punctuation = { fg = "fg-dark" }
 "ui.text.directory" = { fg = "comment" }
 
-# Setting the bg to an empty string fixes highlighting in the picker preview
-# (especially in grep), where the matched whole line is not highlighted—only the background.
-"ui.text" = { fg = "fg", bg = "" }
+# Override text by setting only the fg without the bg.  
+# This fixes highlighting in the picker preview (especially in grep),  
+# where the matched whole line is not highlighted—only the background.  
+# We remove the bg from the previous fix since it changes the text color in hover docs.  
+"ui.text" = { fg = "fg" }
