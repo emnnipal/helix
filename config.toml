@@ -127,7 +127,7 @@ u = { t = [ # Trim whitespaces at the end of each line in current buffer
   "add_newline_below",
   "commit_undo_checkpoint",
   ":write",
-] }
+], r = ":reload-all" }
 
 # for macros
 "+" = { f = "file_picker" }
