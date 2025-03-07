@@ -19,6 +19,7 @@ cursor-line = "error"
 
 [editor.lsp]
 display-messages = true
+# display-progress-messages = true
 
 [editor.cursor-shape]
 insert = "bar"
