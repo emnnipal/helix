@@ -39,6 +39,8 @@ left = [
 render = true
 character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
 
+[editor.whitespace.render]
+# newline = "all"
 
 # The keymap should be somewhat similar to neovim, especially for navigation.
 # However, the core idea remains: select first, then perform an action.
