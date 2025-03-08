@@ -60,8 +60,8 @@ D = ["select_mode", "goto_line_end", "delete_selection"]
 g = { h = "hover" }
 "A-o" = ["select_mode", "expand_selection"]
 "ret" = "goto_word"
-a = ["collapse_selection", "append_mode"]
-i = ["collapse_selection", "insert_mode"]
+# a = ["collapse_selection", "append_mode"]
+# i = ["collapse_selection", "insert_mode"]
 
 # Remove selection in horizontal line navigations due to issue with append and insert keymap. Going at the start/end of selection instead of relative to the cursor.
 w = ["move_next_word_start", "collapse_selection"]
@@ -164,8 +164,8 @@ V = ["extend_line_below", "select_mode"]
 H = "goto_line_start"
 L = "goto_line_end"
 "C-n" = "search_selection"
-a = ["collapse_selection", "append_mode"]
-i = ["collapse_selection", "insert_mode"]
+# a = ["collapse_selection", "append_mode"]
+# i = ["collapse_selection", "insert_mode"]
 
 # [keys.normal.space.g]
 # NOTE: this is problematic. A lot of issues occur when using this. You no longer can't use <c-o> in lazygit even used outside of helix.
