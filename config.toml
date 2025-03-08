@@ -103,10 +103,13 @@ b = ["move_prev_word_start", "collapse_selection"]
 B = ["move_prev_long_word_start", "collapse_selection"]
 
 [keys.normal.space]
+# Open yazi in new tmux-window
 e = [":sh tmux new-window -n fx ~/.config/helix/s/picker.sh '%{buffer_name}'"]
 E = "file_explorer_in_current_buffer_directory"
 # e = "file_explorer_in_current_buffer_directory"
 # E = "file_explorer"
+
+# Open file picker with preview off.
 f = "@<space>+f<C-t>"
 w = ":update"
 J = "jumplist_picker"
@@ -115,7 +118,7 @@ k = "goto_next_buffer"
 o = "file_picker_in_current_buffer_directory"
 z = "suspend"
 
-# utilities 
+# utilities
 u = { t = [ # Trim whitespaces at the end of each line in current buffer
   "save_selection",
   "select_all",
@@ -136,6 +139,7 @@ u = { t = [ # Trim whitespaces at the end of each line in current buffer
 
 [keys.normal.space.g]
 g = ":sh tmux new-window -n lg 'lazygit'"
+
 # Show git history of current buffer.
 f = [
   ":noop %sh{git -c color.ui=always log --follow -p '%{buffer_name}' | delta > /tmp/hx-git-file.log}",
@@ -172,7 +176,6 @@ a = ["select_mode", "select_textobject_around"]
 i = { b = "@mi(", B = "@mi{" }
 a = { b = "@ma(", B = "@ma{" }
 
-
 [keys.normal.space.q]
 q = ":quit"
 c = ":buffer-close"
@@ -183,7 +186,6 @@ j = { k = "normal_mode", j = "normal_mode" }
 k = { j = "normal_mode", k = "normal_mode" }
 "C-space" = "completion"
 "C-v" = "paste_before"
-
 
 [keys.select]
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
