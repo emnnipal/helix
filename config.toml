@@ -39,7 +39,7 @@ left = [
 render = true
 character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
 
-[editor.whitespace.render]
+# [editor.whitespace.render]
 # newline = "all"
 
 # The keymap should be somewhat similar to neovim, especially for navigation.
@@ -47,34 +47,11 @@ character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
-J = [
-  "move_line_down",
-  "move_line_down",
-  "move_line_down",
-  "move_line_down",
-  "move_line_down",
-  "move_line_down",
-  "move_line_down",
-  "move_line_down",
-  "move_line_down",
-  "move_line_down",
-]
-K = [
-  "move_line_up",
-  "move_line_up",
-  "move_line_up",
-  "move_line_up",
-  "move_line_up",
-  "move_line_up",
-  "move_line_up",
-  "move_line_up",
-  "move_line_up",
-  "move_line_up",
-]
+J = "@10j"
+K = "@10k"
 G = "goto_last_line"
 H = "goto_first_nonwhitespace"
 L = "goto_line_end"
-# V = ["extend_line_below", "select_mode", "trim_selections"]
 V = ["extend_line_below", "select_mode"]
 x = ["extend_line_below", "select_mode"]
 "C-r" = "redo"
@@ -82,19 +59,9 @@ D = ["select_mode", "goto_line_end", "delete_selection"]
 "%" = ["select_mode", "select_all"]
 g = { h = "hover" }
 "A-o" = ["select_mode", "expand_selection"]
-# x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
 "ret" = "goto_word"
 a = ["collapse_selection", "append_mode"]
 i = ["collapse_selection", "insert_mode"]
-# make "a" the same insert, no selection when in append mode
-# a = [
-#   "ensure_selections_forward",
-#   "collapse_selection",
-#   "move_char_right",
-#   "insert_mode",
-# ]
-
-# P = "@O<C-v><esc>"
 
 # Remove selection in horizontal line navigations due to issue with append and insert keymap. Going at the start/end of selection instead of relative to the cursor.
 w = ["move_next_word_start", "collapse_selection"]
@@ -108,8 +75,6 @@ B = ["move_prev_long_word_start", "collapse_selection"]
 # Open yazi in new tmux-window
 e = [":sh tmux new-window -n fx ~/.config/helix/s/picker.sh '%{buffer_name}'"]
 E = "file_explorer_in_current_buffer_directory"
-# e = "file_explorer_in_current_buffer_directory"
-# E = "file_explorer"
 
 # Open file picker with preview off.
 f = "@<space>+f<C-t>"
@@ -191,33 +156,10 @@ k = { j = "normal_mode", k = "normal_mode" }
 
 [keys.select]
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
-J = [
-  "extend_line_down",
-  "extend_line_down",
-  "extend_line_down",
-  "extend_line_down",
-  "extend_line_down",
-  "extend_line_down",
-  "extend_line_down",
-  "extend_line_down",
-  "extend_line_down",
-  "extend_line_down",
-]
-K = [
-  "extend_line_up",
-  "extend_line_up",
-  "extend_line_up",
-  "extend_line_up",
-  "extend_line_up",
-  "extend_line_up",
-  "extend_line_up",
-  "extend_line_up",
-  "extend_line_up",
-  "extend_line_up",
-]
+J = "@10j"
+K = "@10k"
 G = "goto_last_line"
 P = "replace_with_yanked"
-# V = ["extend_line_below", "select_mode", "trim_selections"]
 V = ["extend_line_below", "select_mode"]
 H = "goto_line_start"
 L = "goto_line_end"
@@ -225,26 +167,10 @@ L = "goto_line_end"
 a = ["collapse_selection", "append_mode"]
 i = ["collapse_selection", "insert_mode"]
 
-# make "a" the same insert, no selection when in append mode
-# a = [
-#   "ensure_selections_forward",
-#   "collapse_selection",
-#   "move_char_right",
-#   "insert_mode",
-# ]
-# y = ["trim_selections", "yank"]
-
-# "C-space" = "expand_selection"
-
-
 # [keys.normal.space.g]
-# d = "changed_file_picker"
 # NOTE: this is problematic. A lot of issues occur when using this. You no longer can't use <c-o> in lazygit even used outside of helix.
 # g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw", ":reload-all"]
 # you need to set allow_remote_control to yes in order to use kitty @ launch
-# g = [
-#   ":sh kitty @ launch --type tab --allow-remote-control --title lazygit --cwd current --copy-env lazygit",
-# ]
 
 
 # NOTE: create new file relative to current buffer path
