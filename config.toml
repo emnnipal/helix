@@ -53,11 +53,11 @@ K = "@10k"
 G = "goto_last_line"
 H = "goto_first_nonwhitespace"
 L = "goto_line_end"
-V = ["extend_line_below", "select_mode"]
-x = ["extend_line_below", "select_mode"]
+V = "extend_line_below"
+# x = ["extend_line_below", "select_mode"]
 "C-r" = "redo"
 D = ["select_mode", "goto_line_end", "delete_selection"]
-"%" = ["select_mode", "select_all"]
+# "%" = ["select_mode", "select_all"]
 g = { h = "hover" }
 "A-o" = ["select_mode", "expand_selection"]
 "ret" = "goto_word"
@@ -65,12 +65,12 @@ g = { h = "hover" }
 # i = ["collapse_selection", "insert_mode"]
 
 # Remove selection in horizontal line navigations due to issue with append and insert keymap. Going at the start/end of selection instead of relative to the cursor.
-w = ["move_next_word_start", "collapse_selection"]
-W = ["move_next_long_word_start", "collapse_selection"]
-e = ["move_next_word_end", "collapse_selection"]
-E = ["move_next_long_word_end", "collapse_selection"]
-b = ["move_prev_word_start", "collapse_selection"]
-B = ["move_prev_long_word_start", "collapse_selection"]
+# w = ["move_next_word_start", "collapse_selection"]
+# W = ["move_next_long_word_start", "collapse_selection"]
+# e = ["move_next_word_end", "collapse_selection"]
+# E = ["move_next_long_word_end", "collapse_selection"]
+# b = ["move_prev_word_start", "collapse_selection"]
+# B = ["move_prev_long_word_start", "collapse_selection"]
 
 [keys.normal.space]
 # Open yazi in new tmux-window
@@ -135,8 +135,8 @@ l = [
 
 [keys.normal.m]
 # Workaround for us to be able to replace highlighted/selected text with P keymap.
-i = ["select_mode", "select_textobject_inner"]
-a = ["select_mode", "select_textobject_around"]
+# i = ["select_mode", "select_textobject_inner"]
+# a = ["select_mode", "select_textobject_around"]
 # i = { b = "@mi(", B = "@mi{" }
 # a = { b = "@ma(", B = "@ma{" }
 
@@ -162,7 +162,7 @@ J = "@10j"
 K = "@10k"
 G = "goto_last_line"
 P = "replace_with_yanked"
-V = ["extend_line_below", "select_mode"]
+V = "extend_line_below"
 H = "goto_line_start"
 L = "goto_line_end"
 "C-n" = "search_selection"
