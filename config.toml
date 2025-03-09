@@ -23,6 +23,7 @@ display-messages = true
 
 [editor.cursor-shape]
 insert = "bar"
+select = 'underline'
 
 [editor.statusline]
 left = [
@@ -59,8 +60,9 @@ V = ["select_mode", "extend_to_line_bounds"]
 D = ["select_mode", "goto_line_end", "delete_selection"]
 # "%" = ["select_mode", "select_all"]
 g = { h = "hover" }
-"A-o" = ["select_mode", "expand_selection"]
+# "A-o" = ["select_mode", "expand_selection"]
 "ret" = "goto_word"
+"C-n" = "search_selection"
 # a = ["collapse_selection", "append_mode"]
 # i = ["collapse_selection", "insert_mode"]
 
@@ -135,8 +137,8 @@ l = [
 
 [keys.normal.m]
 # Workaround for us to be able to replace highlighted/selected text with P keymap.
-i = ["select_mode", "select_textobject_inner"]
-a = ["select_mode", "select_textobject_around"]
+# i = ["select_mode", "select_textobject_inner"]
+# a = ["select_mode", "select_textobject_around"]
 # i = { b = "@mi(", B = "@mi{" }
 # a = { b = "@ma(", B = "@ma{" }
 
