@@ -135,8 +135,8 @@ l = [
 
 [keys.normal.m]
 # Workaround for us to be able to replace highlighted/selected text with P keymap.
-# i = ["select_mode", "select_textobject_inner"]
-# a = ["select_mode", "select_textobject_around"]
+i = ["select_mode", "select_textobject_inner"]
+a = ["select_mode", "select_textobject_around"]
 # i = { b = "@mi(", B = "@mi{" }
 # a = { b = "@ma(", B = "@ma{" }
 
