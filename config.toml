@@ -63,6 +63,13 @@ g = { h = "hover" }
 "C-n" = "search_selection"
 # a = ["collapse_selection", "append_mode"]
 # i = ["collapse_selection", "insert_mode"]
+# TODO: try once yazi releases version 25.3.7
+C-y = [
+  ':sh rm -f /tmp/unique-file',
+  ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+  ':open %sh{cat /tmp/unique-file}',
+  ':redraw',
+]
 
 # Remove selection in horizontal line navigations due to issue with append and insert keymap. Going at the start/end of selection instead of relative to the cursor.
 # w = ["move_next_word_start", "collapse_selection"]
