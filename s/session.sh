@@ -44,7 +44,9 @@ list_sessions() {
     exit 0
   fi
 
-  cat "$SESSION_FILE"
+  while IFS= read -r file_path; do
+    echo "${file_path#$PWD/}" # Remove the PWD part but keep the relative path
+  done <"$SESSION_FILE"
 }
 
 remove_session() {
