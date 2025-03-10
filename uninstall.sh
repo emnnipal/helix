@@ -20,6 +20,6 @@ pnpm remove -g \
 # eslint \
 
 # uninstall LSP packages instaleld using brew
-# brew uninstall \
-#   taplo \
-#   shfmt # formatter for shell/bash files
+brew uninstall \
+  taplo \
+  shfmt # formatter for shell/bash files
