@@ -100,8 +100,12 @@ o = "file_picker_in_current_buffer_directory"
 R = "last_picker"
 z = "suspend"
 
+# for macros
+"+" = { f = "file_picker" }
+
 # utilities
-u = { t = [ # Trim whitespaces at the end of each line in current buffer
+[keys.normal.space.u]
+t = [ # Trim whitespaces at the end of each line in current buffer
   "save_selection",
   "select_all",
   # Delete trailing whitespace from end of each line
@@ -113,10 +117,9 @@ u = { t = [ # Trim whitespaces at the end of each line in current buffer
   "add_newline_below",
   "commit_undo_checkpoint",
   ":write",
-], r = ":reload-all", d = ":toggle-option inline-diagnostics.cursor-line disable error" }
-
-# for macros
-"+" = { f = "file_picker" }
+]
+r = ":reload-all"
+d = ":toggle-option inline-diagnostics.cursor-line disable error"
 
 
 [keys.normal.space.g]
@@ -162,6 +165,13 @@ a = { b = "@ma(", B = "@ma{" }
 q = ":quit"
 c = ":buffer-close"
 C = ":buffer-close-others"
+
+[keys.normal.space.q.s]
+a = ":sh ~/.config/helix/s/session.sh add '%{buffer_name}'"
+r = ":sh ~/.config/helix/s/session.sh restore"
+c = ":sh ~/.config/helix/s/session.sh clear"
+l = ":sh ~/.config/helix/s/session.sh list"
+x = ":sh ~/.config/helix/s/session.sh remove '%{buffer_name}'"
 
 [keys.insert]
 j = { k = "normal_mode", j = "normal_mode" }
