@@ -15,7 +15,7 @@ clipboard-provider = "pasteboard"
 hidden = false
 
 [editor.inline-diagnostics]
-cursor-line = "error"
+# cursor-line = "error" # NOTE: just toggle instead with "<space>ud". Removing this config makes it disabled by default.
 
 [editor.lsp]
 display-messages = true
@@ -106,7 +106,7 @@ u = { t = [ # Trim whitespaces at the end of each line in current buffer
   "add_newline_below",
   "commit_undo_checkpoint",
   ":write",
-], r = ":reload-all" }
+], r = ":reload-all", d = ":toggle-option inline-diagnostics.cursor-line disable error" }
 
 # for macros
 "+" = { f = "file_picker" }
