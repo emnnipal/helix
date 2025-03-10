@@ -11,11 +11,14 @@ add_session() {
 
   if [[ ! -f "$file_path" ]]; then
     echo "Error: File does not exist."
-    exit 0
+    return 1 # Return instead of exit
   fi
 
-  echo "$file_path" >>"$SESSION_FILE"
-  sort -u -o "$SESSION_FILE" "$SESSION_FILE"
+  # Remove previous occurrence, then append at the bottom
+  awk -v f="$file_path" '$0 != f' "$SESSION_FILE" >"$SESSION_FILE.tmp"
+  echo "$file_path" >>"$SESSION_FILE.tmp"
+  mv "$SESSION_FILE.tmp" "$SESSION_FILE"
+
   echo "Added to session: $file_path"
 }
 
@@ -66,6 +69,7 @@ remove_session() {
 
   echo "Removed from session: $1"
 }
+
 clear_sessions() {
   rm -f "$SESSION_FILE"
   echo "Cleared session for this directory."
@@ -78,7 +82,7 @@ list) list_sessions ;;
 remove) remove_session "$2" ;;
 clear) clear_sessions ;;
 *)
-  echo "Usage: $0 {add|open|list|remove|clear} [file]"
+  echo "Usage: $0 {add|restore|list|remove|clear} [file]"
   exit 0
   ;;
 esac
