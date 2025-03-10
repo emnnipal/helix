@@ -78,7 +78,13 @@ E = "file_explorer_in_current_buffer_directory"
 
 # Open file picker with preview off.
 f = "@<space>+f<C-t>"
+
+# Save file. Write changes if the file has been modified. 
 w = ":update"
+
+# Save file wihtout formatting # TODO: use :write --no-format when implemented
+W = ':toggle-option auto-format'
+
 J = "jumplist_picker"
 j = "goto_previous_buffer"
 k = "goto_next_buffer"
