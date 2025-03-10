@@ -162,7 +162,8 @@ i = { b = "@mi(", B = "@mi{" }
 a = { b = "@ma(", B = "@ma{" }
 
 [keys.normal.space.q]
-q = ":quit"
+# Save current buffer to session then quit helix.
+q = [":sh ~/.config/helix/s/session.sh add '%{buffer_name}'", ":quit"]
 c = ":buffer-close"
 C = ":buffer-close-others"
 
