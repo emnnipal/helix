@@ -188,6 +188,7 @@ file-types = [
 
 [[language]]
 name = "jsonc"
+# formatter = { command = 'prettier', args = ["--parser", "json"] }
 formatter = { command = 'biome', args = [
   "format",
   "--write",
