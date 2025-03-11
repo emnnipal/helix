@@ -112,6 +112,9 @@ t = [ # Trim whitespaces at the end of each line in current buffer
 ]
 r = ":reload-all"
 d = ":toggle-option inline-diagnostics.cursor-line disable error"
+# R = ":sh tmux popup -xC -yC -w90%% -h90%% -E scooter"
+R = ":sh ~/.config/helix/s/scooter.sh"
+# TODO: keymap for using scooter(search and replace)
 
 
 [keys.normal.space.g]
