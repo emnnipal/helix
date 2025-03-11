@@ -3,7 +3,7 @@ inherits = "tokyonight_storm"
 # Override Theme
 "ui.selection" = { bg = "#2E3C64" }
 "ui.selection.primary" = { bg = "#2E3C64" }
-"ui.bufferline" = { bg = "bg-menu", fg = "gray" }
+"ui.bufferline" = { bg = "bg-menu", fg = "comment" }
 "ui.bufferline.active" = { fg = "white", bg = "bg", modifiers = ["bold"] }
 "ui.statusline.separator" = "|"
 "ui.linenr" = { fg = "comment", modifiers = ["dim"] }
