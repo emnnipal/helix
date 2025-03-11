@@ -4,7 +4,7 @@
 # brew install \
 #   helix \
 #   tree-sitter \
-#   sad \
+#   scooter \
 #   tmux \
 #   yazi
 
