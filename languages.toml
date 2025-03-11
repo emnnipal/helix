@@ -186,6 +186,19 @@ file-types = [
   { glob = "*.conf" },
 ]
 
+[[language]]
+name = "jsonc"
+formatter = { command = 'biome', args = [
+  "format",
+  "--write",
+  "--stdin-file-path",
+  "file.json",
+] }
+language-servers = [
+  { name = "vscode-json-language-server", except-features = [
+    "format",
+  ] },
+]
 
 [[language]]
 name = "json"
