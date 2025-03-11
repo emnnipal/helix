@@ -200,6 +200,12 @@ language-servers = [
     "format",
   ] },
 ]
+file-types = [
+  "jsonc",
+  { glob = "tsconfig.json" },
+  { glob = "tsconfig.*.json" },
+  { glob = "bun.lock" },
+]
 
 [[language]]
 name = "json"
