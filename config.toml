@@ -9,7 +9,7 @@ completion-timeout = 5
 completion-trigger-len = 1
 default-yank-register = "+"       # use system clipboard for yank and paste actions
 clipboard-provider = "pasteboard"
-# preview-completion-insert = false
+preview-completion-insert = false
 
 [editor.file-picker]
 hidden = false
