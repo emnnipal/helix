@@ -14,6 +14,9 @@ add_session() {
     return 1 # Return instead of exit
   fi
 
+  # Ensure the session file exists before using awk
+  touch "$SESSION_FILE"
+
   # Remove previous occurrence, then append at the bottom
   awk -v f="$file_path" '$0 != f' "$SESSION_FILE" >"$SESSION_FILE.tmp"
   echo "$file_path" >>"$SESSION_FILE.tmp"
