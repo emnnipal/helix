@@ -15,6 +15,11 @@ attribute = { fg = "green" }
 punctuation = { fg = "fg-dark" }
 "ui.text.directory" = { fg = "comment" }
 
+# Redefining colors to remove italic modifiers.
+function = { fg = "blue" }
+"variable.parameter" = { fg = "yellow" }
+
+
 # Override text by setting only the fg without the bg.  
 # This fixes highlighting in the picker preview (especially in grep),  
 # where the matched whole line is not highlighted—only the background.  
