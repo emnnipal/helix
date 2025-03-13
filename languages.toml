@@ -1,6 +1,10 @@
 [language-server]
 biome = { command = "biome", args = ["lsp-proxy"] }
 
+# NOTE: As much as I like to use helix, neovim's handling of LSP and completion is a lot better than helix.
+# Completion is a lot faster and handles LSP well. In helix, I can really feel the UI blocked especially on slow
+# completions.
+
 # NOTE: Based on experience, vtsls feels faster and more responsive for TypeScript completion.
 # It avoids suggesting nearby variables, which can sometimes be irrelevant while waiting for
 # completion results. In contrast, typescript-language-server is slower and often suggests
