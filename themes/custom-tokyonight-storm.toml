@@ -18,6 +18,7 @@ punctuation = { fg = "fg-dark" }
 # Redefining colors to remove italic modifiers.
 function = { fg = "blue" }
 "variable.parameter" = { fg = "yellow" }
+"keyword.control" = { fg = "magenta", modifiers = ["italic"] }
 
 
 # Override text by setting only the fg without the bg.  
