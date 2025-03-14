@@ -117,7 +117,7 @@ R = ":sh ~/.config/helix/s/scooter.sh"
 
 
 [keys.normal.space.g]
-g = ":sh tmux new-window -n lg 'lazygit'"
+g = ":sh tmux_window=\"lg-$(basename $(pwd))\"; tmux list-windows | grep -q \"$tmux_window\" && tmux select-window -t \"$tmux_window\" || tmux new-window -n \"$tmux_window\" 'lazygit'"
 
 # Show git history of current buffer.
 f = [
