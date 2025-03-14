@@ -117,7 +117,9 @@ R = ":sh ~/.config/helix/s/scooter.sh"
 
 
 [keys.normal.space.g]
-g = ":sh tmux_window=\"lg-$(basename $(pwd))\"; tmux list-windows | grep -q \"$tmux_window\" && tmux select-window -t \"$tmux_window\" || tmux new-window -n \"$tmux_window\" 'lazygit'"
+g = [
+  ":sh tmux_window=\"lg-$(basename $(pwd))\"; tmux list-windows | grep -q \"$tmux_window\" && tmux select-window -t \"$tmux_window\" || tmux new-window -n \"$tmux_window\" 'lazygit'",
+]
 
 # Show git history of current buffer.
 f = [
@@ -126,7 +128,7 @@ f = [
 ]
 c = "changed_file_picker"
 # Show blame info for current line.
-b = ":echo %sh{git blame -L %{cursor_line},+1 '%{buffer_name}'}"
+b = [":echo %sh{git blame -L %{cursor_line},+1 '%{buffer_name}'}"]
 # Show git history of current line.
 l = [
   ":noop %sh{git -c color.ui=always log -L %{cursor_line},%{cursor_line}:'%{buffer_name}' | delta > /tmp/hx-git-line.log}",
