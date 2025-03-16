@@ -114,6 +114,7 @@ t = [ # Trim whitespaces at the end of each line in current buffer
   ":write",
 ]
 r = ":reload-all"
+d = ":toggle-option end-of-line-diagnostics disable hint"
 # R = ":sh tmux popup -xC -yC -w90%% -h90%% -E scooter"
 R = ":sh ~/.config/helix/s/scooter.sh"
 
