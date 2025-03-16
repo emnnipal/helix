@@ -21,6 +21,9 @@ hidden = false
 display-messages = true
 # display-progress-messages = true
 
+[editor.smart-tab]
+enable = false
+
 [editor.cursor-shape]
 insert = "bar"
 select = 'underline'
