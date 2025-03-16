@@ -6,7 +6,9 @@ biome = { command = "biome", args = ["lsp-proxy"] }
 # completions.
 # UPDATE: I think helix is fast, it's just that, helix immediately shows the diagnostics even when
 # I'm in insert mode rather than showing them when in normal mode just like in neovim. Maybe this is the reason
-# for having those lag spikes when accepting completions.
+# for having those lag spikes when accepting completions. They are distracting as well, combine them the fact
+# that signature help is always displayed rather than hidden when typing. I can turn this off but neovim
+# handles this better.
 
 # NOTE: Based on experience, vtsls feels faster and more responsive for TypeScript completion.
 # It avoids suggesting nearby variables, which can sometimes be irrelevant while waiting for
