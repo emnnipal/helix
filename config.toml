@@ -126,16 +126,16 @@ g = [
 
 # Show git history of current buffer.
 f = [
-  ":noop %sh{git -c color.ui=always log --follow -p '%{buffer_name}' | delta > /tmp/hx-git-file.log}",
-  ":sh tmux new-window -n git-file-history 'less -R /tmp/hx-git-file.log; rm -f /tmp/hx-git-file.log'",
+  ":sh tmux new-window -n git-file-history git -c color.ui=always log --follow -p '%{buffer_name}' | delta",
 ]
+# f = [":sh tmux new-window -n git-file-history 'lazygit -f %{buffer_name}'"]
 c = "changed_file_picker"
 # Show blame info for current line.
 b = [":echo %sh{git blame -L %{cursor_line},+1 '%{buffer_name}'}"]
 # Show git history of current line.
 l = [
-  ":noop %sh{git -c color.ui=always log -L %{cursor_line},%{cursor_line}:'%{buffer_name}' | delta > /tmp/hx-git-line.log}",
-  ":sh tmux new-window -n git-line-history 'less -R /tmp/hx-git-line.log; rm -f /tmp/hx-git-line.log'",
+  ":sh tmux new-window -n git-line-history git -c color.ui=always log -L %{cursor_line},%{cursor_line}:'%{buffer_name}' | delta",
+
 ]
 
 [keys.normal.m]
