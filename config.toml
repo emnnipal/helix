@@ -60,7 +60,7 @@ X = ["select_mode", "select_line_above"]
 "C-r" = "redo"
 D = ["select_mode", "goto_line_end", "delete_selection"]
 "%" = ["select_mode", "select_all"]
-g = { h = "hover" }
+g = { h = "hover", l = ":toggle-option inline-diagnostics.cursor-line disable error" }
 "A-o" = ["select_mode", "expand_selection"]
 "ret" = "goto_word"
 "C-n" = "search_selection"
@@ -114,7 +114,6 @@ t = [ # Trim whitespaces at the end of each line in current buffer
   ":write",
 ]
 r = ":reload-all"
-d = ":toggle-option inline-diagnostics.cursor-line disable error"
 # R = ":sh tmux popup -xC -yC -w90%% -h90%% -E scooter"
 R = ":sh ~/.config/helix/s/scooter.sh"
 
