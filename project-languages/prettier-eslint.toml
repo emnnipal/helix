@@ -5,6 +5,9 @@ formatter = { command = 'prettier', args = ["--parser", "css"] }
 [[language]]
 name = "javascript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+language-servers = [
+  # "vscode-eslint-language-server",
+]
 
 [[language]]
 name = "typescript"
