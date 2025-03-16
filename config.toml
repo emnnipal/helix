@@ -31,12 +31,12 @@ select = 'underline'
 [editor.statusline]
 left = [
   "mode",
-  "version-control",
+  # "version-control",
   "spinner",
   "file-name",
   "file-modification-indicator",
   "read-only-indicator",
-  "file-type",
+  # "file-type",
 ]
 
 [editor.indent-guides]
