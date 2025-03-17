@@ -19,6 +19,7 @@ hidden = false
 
 [editor.lsp]
 display-messages = true
+auto-signature-help = false
 # display-progress-messages = true
 
 [editor.smart-tab]
@@ -60,7 +61,7 @@ X = ["select_mode", "select_line_above"]
 "C-r" = "redo"
 D = ["select_mode", "goto_line_end", "delete_selection"]
 "%" = ["select_mode", "select_all"]
-g = { h = "hover", l = ":toggle-option inline-diagnostics.cursor-line disable error" }
+g = { h = "hover", k = "signature_help", l = ":toggle-option inline-diagnostics.cursor-line disable error" }
 "A-o" = ["select_mode", "expand_selection"]
 "ret" = "goto_word"
 "C-n" = "search_selection"
