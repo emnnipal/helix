@@ -59,7 +59,7 @@ V = ["select_mode", "extend_to_line_bounds"]
 x = ["select_mode", "select_line_below"]
 X = ["select_mode", "select_line_above"]
 "C-r" = "redo"
-D = ["select_mode", "goto_line_end", "delete_selection"]
+D = "kill_to_line_end"
 "%" = ["select_mode", "select_all"]
 g = { h = "hover", k = "signature_help", l = ":toggle-option inline-diagnostics.cursor-line disable error" }
 "A-o" = ["select_mode", "expand_selection"]
