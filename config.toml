@@ -166,6 +166,7 @@ j = { k = "normal_mode", j = "normal_mode" }
 k = { j = "normal_mode", k = "normal_mode" }
 "C-space" = "completion"
 "C-v" = "paste_before"
+"A-k" = "signature_help"
 
 
 # NOTE: I get what select means now. It's literally just to extend. This is
