@@ -9,6 +9,8 @@ biome = { command = "biome", args = ["lsp-proxy"] }
 # for having those lag spikes when accepting completions. They are distracting as well, combine them the fact
 # that signature help is always displayed rather than hidden when typing. I can turn this off but neovim
 # handles this better.
+# UPDATE: I really like helix, but right now, neovim is a lot more productive to use. There are just missing
+# features in helix that is hassle to use.
 
 # NOTE: Based on experience, vtsls feels faster and more responsive for TypeScript completion.
 # It avoids suggesting nearby variables, which can sometimes be irrelevant while waiting for
